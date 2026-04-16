@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #09090b; /* Zinc 950 */
+  --foreground: #fafafa; /* Zinc 50 */
+  --muted: #a1a1aa; /* Zinc 400 */
+  --accent: #38bdf8; /* Light Blue 400 */
+  --accent-hover: #0ea5e9; /* Light Blue 500 */
+}
+
+@layer components {
+  .glass-nav {
+    @apply bg-[#09090b]/90 backdrop-blur-md border-b border-white/5;
+  }
+  
+  .glass-card {
+    @apply bg-white/[0.02] border border-white/5 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.04] hover:border-white/10;
+  }
+  
+  .flat-card {
+    @apply bg-white/[0.03] p-6 lg:p-8 rounded-none border border-transparent hover:border-white/10 hover:bg-white/[0.05] transition-all duration-300;
+  }
+
+  .timeline-track {
+    @apply border-l-2 border-white/10 ml-3 md:ml-4 relative pl-6 md:pl-10 pb-8;
+  }
+
+  .timeline-item {
+    @apply relative mb-12 last:mb-0;
+  }
+
+  .timeline-marker {
+    @apply absolute -left-[31px] md:-left-[47px] top-1 w-4 h-4 rounded-full rounded-br-none -rotate-45 bg-background border-2 border-accent;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold tracking-tight mb-8 text-foreground uppercase text-sm tracking-widest text-[#a1a1aa];
+  }
+  
+  .nav-link {
+    @apply text-sm font-medium text-muted hover:text-foreground hover:border-b-2 hover:border-accent pb-1 transition-all duration-200;
+  }
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) var(--background);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
