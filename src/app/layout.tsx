@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anila Mathai | Software Developer",
     description: "Portfolio of Anila Mathai, an Emerging Software Developer specializing in AI/ML and Full Stack Development.",
-    url: "https://your-deployment-url.vercel.app",
+    url: "https://anila-mathai.vercel.app",
     siteName: "Anila Mathai Portfolio",
     type: "website",
   },
@@ -26,6 +26,9 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
+  },
+  verification: {
+    google: "dem57GydR0ahXnXHixhxhyVPQaEClAFh8ZbyB3kq8_U",
   },
 };
 
