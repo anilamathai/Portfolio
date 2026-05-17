@@ -12,7 +12,7 @@
 
 @layer components {
   .glass-nav {
-    @apply bg-[#09090b]/90 backdrop-blur-md border-b border-white/5;
+    @apply bg-[#09090b]/90 backdrop-blur-md;
   }
   
   .glass-card {
