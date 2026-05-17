@@ -52,18 +52,27 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-6 relative overflow-hidden">
+        {/* Background Image restricted to right side with smoothened borders on all sides */}
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-full md:w-3/4 lg:w-1/2 -z-20 opacity-30 bg-cover bg-center"
+          style={{ 
+            backgroundImage: "url('/anila_image.jpeg')",
+            WebkitMaskImage: "radial-gradient(closest-side, black 10%, transparent 100%)",
+            maskImage: "radial-gradient(closest-side, black 10%, transparent 100%)"
+          }}
+        />
+
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[128px] -z-10" />
         
         <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="max-w-4xl mx-auto text-center z-10">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Hi, I'm Anila Mathai</h2>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Hi, I'm <span className="text-accent">Anila Mathai</span></h2>
           <div className="text-xl md:text-3xl text-muted mb-8 h-10 font-light">
             I'm a{' '}
             <TypeAnimation
               sequence={[
                 'Software Developer', 1000,
                 'AI/ML Developer', 1000,
-                'Problem Solver', 1000,
-                'Frontend Developer', 1000
+                'Problem Solver', 1000
               ]}
               wrapper="span"
               speed={50}
@@ -76,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 bg-white/[0.01]">
+      <section id="about" className="py-24 px-6 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             
@@ -202,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-6 bg-white/[0.01]">
+      <section id="projects" className="py-24 px-6 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16">
             <div className="lg:w-1/3">
               <motion.h2 initial="initial" whileInView="animate" viewport={{ once: true, margin: "-50px" }} variants={fadeLeft} className="section-title">Projects</motion.h2>
@@ -221,7 +230,7 @@ export default function Home() {
                 {
                   title: "Auto-Architecture Explainer",
                   role: "AI/ML Developer",
-                  duration: "Ongoing",
+                  duration: "4 Months",
                   description: "System to automatically analyze source code and generate software architecture diagrams with natural-language explanations using LLMs and AST.",
                   tags: ["Python", "LLMs", "AST", "Clustering", "Graph Visualization"],
                   link: "https://github.com/anilamathai"
@@ -370,7 +379,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 bg-white/[0.01]">
+      <section id="contact" className="py-24 px-6 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
         <div className="max-w-4xl mx-auto text-center">
             <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
               <h2 className="section-title mb-4">Contact Me</h2>
