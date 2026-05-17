@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Brain, User, Bri
 import { SiPython, SiC, SiCplusplus, SiJavascript, SiGooglecolab, SiStreamlit, SiMysql } from "react-icons/si";
 import { FaJava, FaDatabase, FaCss3, FaHtml5 } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
 
 const fadeUp = {
@@ -83,7 +84,13 @@ export default function Home() {
             <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: "-50px" }} variants={zoomIn} className="lg:w-1/3">
                <div className="glass-card p-8 flex flex-col items-center text-center h-full">
                  <div className="w-48 h-48 rounded-full bg-white/5 mb-6 flex items-center justify-center border-[6px] border-white/5 overflow-hidden">
-                    <User size={80} className="text-muted/50" />
+                    <Image 
+                      src="/anila_image.jpeg" 
+                      alt="Anila Mathai" 
+                      width={192} 
+                      height={192} 
+                      className="object-cover object-[center_20%] w-full h-full"
+                    />
                  </div>
                  <h3 className="text-2xl font-bold mb-2">Anila Mathai</h3>
                  <span className="text-accent text-sm font-medium mb-6 uppercase tracking-widest text-[#a1a1aa] block border-b border-white/5 w-full pb-6">Software Developer</span>
